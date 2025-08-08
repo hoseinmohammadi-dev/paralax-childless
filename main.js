@@ -78,19 +78,45 @@ window.addEventListener('scroll', () => {
     ////sec2////
 
     ////star///
-    const starLine = document.querySelector('.star>img');    
+    const starLine = document.querySelector('.star>img');
 
-    let starRotate = st / 5;
+    let starRotate = st / 7;
     starLine.style.transform = `rotate(${starRotate}deg)`;
 
 
-    const starLine2 = document.querySelector('.star2>img');    
+    const starLine2 = document.querySelector('.star2>img');
 
-    let starRotate2 = st / 5;
-    starLine2.style.transform = `rotate(${starRotate2}deg)`;
+    let starRotate2 = st / 7;
+    starLine2.style.transform = `rotate(-${starRotate2}deg)`;
 
 
 })
+
+
+////////sec4////////
+const _arrowRight = document.querySelector('.arrow_right')
+const _arrowLeft = document.querySelector('.arrow_left')
+const _busBox = document.querySelector('.scroll-track')
+const _boxes = document.querySelectorAll('.scroll-track > div');
+
+let _temp = 0;
+const boxWidth = 630;
+
+_arrowRight.addEventListener('click', () => {
+    if (_temp < _boxes.length - 2) {
+        _temp++;
+        _busBox.style.left = `-${_temp * boxWidth}px`;
+    }
+});
+_arrowLeft.addEventListener('click', () => {
+    if (_temp > 0) {
+        _temp--;
+        _busBox.style.left = `-${_temp * boxWidth}px`;
+    }
+});
+
+////////sec4////////
+
 
 
 

@@ -148,15 +148,23 @@ main {
             font-size: 38px;
             color: black;
             position: absolute;
-            top: 50%;
+            top: 40%;
             left: 50%;
             transform: translate(-50%, -50%);
             font-family: 'BodoniModa', sans-serif;
             font-weight: 600;
 
 
+
+            &:nth-of-type(1) {
+                width: 100%;
+                text-align: center;
+            }
+
             &:nth-of-type(2) {
-                top: calc(50%);
+                width: 100%;
+                text-align: center;
+                top: calc(40%);
                 left: calc(50% - 14px);
             }
 
@@ -329,7 +337,7 @@ main {
             align-items: center;
             display: flex;
             position: absolute;
-            top: 110vh;
+            top: 800px;
 
             >div {
                 width: 500px;
@@ -347,7 +355,89 @@ main {
             }
         }
     }
+
+    #sec4 {
+        width: 100%;
+        height: 85vh;
+        position: relative;
+        top: 1300px;
+            overflow: hidden;
+
+
+
+        >div {
+            display: flex;
+            align-items: center;
+            padding: 20px 30px;
+            justify-content: space-between;
+
+            >h3 {
+                font-size: 50px;
+            }
+
+            >div {
+                >span {
+                    width: 100px !important;
+                    height: 100px !important;
+                    cursor: pointer;
+
+                    &:hover{
+                        background-color: rgba(0, 0, 0, 0.121);
+                    }
+
+                    &:nth-of-type(1) {
+                        margin-right: 5px;
+
+                        >img {
+                            rotate: 180deg;
+                            transform: translateY(-1px);
+                        }
+                    }
+
+                    >img {
+                        width: 25px;
+                        height: 25px;
+                    }
+                }
+
+            }
+        }
+
+        >section {
+            width: 3150px;
+            position: relative;
+            top: 0;left: 0;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-top: 10px;
+            padding-left: 35px;
+            transition: .7s ease-in-out;
+
+            >div {
+                display: flex;
+                align-items: center;
+                text-align: center;
+                padding: 40px;
+                min-width: 600px;
+                height: 350px;
+                border-radius: 10px;
+                background-color: #e8eae5;
+                font-family: BodoniModa;
+                
+
+                >p {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
 }
+
+
+
+
+
 
 
 .fix {
