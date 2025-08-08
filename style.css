@@ -1,0 +1,172 @@
+/* reset  */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 1000vh;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* font  */
+
+@font-face {
+    font-family: 'BodoniModa';
+    src: url('font/BodoniModa-VariableFont_opsz\,wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+main>h1 {
+    font-family: 'BodoniModa', sans-serif;
+}
+
+/* start header  */
+
+header {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #fdfdfd;
+
+    >div {
+        width: 30%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+
+        >a {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            color: black;
+            font-size: 19px;
+            font-weight: 500;
+            margin-right: 30px;
+            padding-inline: 5px;
+            text-decoration: none;
+            position: relative;
+            text-decoration: none;
+            color: inherit;
+
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 50%;
+                bottom: 20px;
+                width: 5px;
+                height: 5px;
+                background-color: currentColor;
+                border-radius: 50%;
+                opacity: 0;
+                transform: translateX(-50%) scale(0);
+                transition: .4s ease;
+            }
+
+            &:hover::after {
+                transform: translateX(-50%) scale(1);
+                opacity: .9;
+
+            }
+
+            &:hover {
+                scale: 1.1;
+                transition: .5s;
+            }
+
+        }
+
+        &:nth-of-type(2) {
+            justify-content: center;
+        }
+
+        &:nth-of-type(3) {
+            justify-content: end;
+
+            >a {
+                margin-right: 0;
+            }
+        }
+    }
+
+}
+
+/* start main  */
+
+main {
+
+    >section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        >h1 {
+            font-size: 150px;
+            text-align: center;
+            position: relative;
+            z-index: 999;
+            top: 200px;
+            transition: .2s ease-out;
+        }
+
+        >img {
+            width: 70%;
+            height: 80vh;
+            position: relative;
+            z-index: 998;
+            top: 300px;
+            transition: .6s ease-out;
+        }
+    }
+
+}
+
+#sec2 {
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    top: 425px;
+
+    >div {
+        font-size: 38px;
+        color: black;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: 'BodoniModa', sans-serif;
+        font-weight: 600;
+
+        &:nth-of-type(2) {
+            top: calc(50%);
+            left: calc(50% - 14px);
+        }
+
+        >* {
+            overflow: hidden;
+            >p{
+                transition: 1s ease-in-out;
+            }
+        }
+    }
+}
+
+
+.fix {
+    position: fixed !important;
+    top: 80px !important;
+    left: 0 !important;
+}
